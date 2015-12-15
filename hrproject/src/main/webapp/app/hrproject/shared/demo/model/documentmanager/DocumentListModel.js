@@ -1,0 +1,43 @@
+Ext.define('Hrproject.hrproject.shared.demo.model.documentmanager.DocumentListModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "docId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "doctypecode",
+          "reference": "DocumentType",
+          "defaultValue": ""
+     }, {
+          "name": "docName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "docFile",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "docDesc",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "docDate",
+          "type": "date",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

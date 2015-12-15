@@ -1,0 +1,42 @@
+Ext.define('Hrproject.hrproject.shared.demo.model.backgroundcheck.EducationDetailsModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "eduPk",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "empid",
+          "reference": "EmpInformation",
+          "defaultValue": ""
+     }, {
+          "name": "degreecode",
+          "reference": "DegreeType",
+          "defaultValue": ""
+     }, {
+          "name": "unvcode",
+          "reference": "UniversityType",
+          "defaultValue": ""
+     }, {
+          "name": "yearOfGraduation",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "DocumentList",
+          "reference": "DocumentListModel"
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

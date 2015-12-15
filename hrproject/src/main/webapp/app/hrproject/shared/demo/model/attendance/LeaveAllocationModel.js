@@ -1,0 +1,43 @@
+Ext.define('Hrproject.hrproject.shared.demo.model.attendance.LeaveAllocationModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "leaveCategoryId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "privilege",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "casualLeave",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "sickLeave",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "maternityLeave",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "year",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

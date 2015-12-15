@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+
+	<persistence-unit name="hrproject" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<jar-file>lib/spartan-healthmeter-1.0.jar</jar-file>
+		<jar-file>lib/spartan-shield-1.0.jar</jar-file>
+		<jar-file>lib/spartan-sprinkler-1.0.jar</jar-file>
+		<jar-file>lib/athena-query-1.0.jar</jar-file>
+		<jar-file>lib/athena-report-1.0.jar</jar-file>
+		<jar-file>lib/athena-cloud-1.0.jar</jar-file>
+		<jar-file>lib/athena-config-1.0.jar</jar-file>
+		<jar-file>lib/athena-core-1.0.jar</jar-file>
+		<jar-file>lib/athena-framework-1.0.jar</jar-file>
+		<jar-file>lib/athena-rule-engine-1.0.jar</jar-file>
+		<jar-file>lib/athena-search-engine-1.0.jar</jar-file>
+		<jar-file>lib/athena-data-endpoint-orchestration-1.0.jar</jar-file>
+		<properties>
+			<property name="eclipselink.session.customizer" value="com.athena.config.server.uuidGenerator.UUIDGenerator"/>
+			<property name="eclipselink.ddl-generation" value="none"/>
+			<property name="eclipselink.logging.level" value="FINEST"/>
+			<property name="eclipselink.weaving" value="false"/>
+			<property name="eclipselink.jdbc.allow-native-sql-queries" value="true"/>
+			<property name="eclipselink.deploy-on-startup" value="true"/>
+
+			<property name="eclipselink.connection-pool.default.initial" value="15"/>
+			<property name="eclipselink.connection-pool.default.min" value="6"/>
+			<property name="eclipselink.connection-pool.default.max" value="10"/>
+
+
+		<property name="eclipselink.dialect" value="org.eclipse.persistence.platform.database.MySQLPlatform"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/demo"/>
+        <property name="javax.persistence.jdbc.user" value="demo"/>
+        <property name="javax.persistence.jdbc.password" value="demo"/>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+	<class>demo.app.shared.location.Timezone</class>
+    <class>demo.app.shared.location.Language</class>
+    <class>demo.app.shared.location.Country</class>
+    <class>demo.app.shared.location.Currency</class>
+    <class>demo.app.shared.location.State</class>
+    <class>demo.app.shared.location.Region</class>
+    <class>demo.app.shared.location.District</class>
+    <class>demo.app.shared.location.City</class>
+    <class>demo.app.shared.location.Taluka</class>
+    <class>demo.app.shared.location.Village</class>
+    <class>demo.app.shared.location.AddressType</class>
+    <class>demo.app.shared.location.Address</class>
+    <class>demo.app.shared.location.AddressExtended</class>
+    <class>demo.app.shared.contacts.ContactType</class>
+    <class>demo.app.shared.contacts.CommunicationGroup</class>
+    <class>demo.app.shared.contacts.CommunicationType</class>
+    <class>demo.app.shared.contacts.Gender</class>
+    <class>demo.app.shared.contacts.Title</class>
+    <class>demo.app.shared.contacts.CoreContacts</class>
+    <class>demo.app.shared.contacts.CommunicationData</class>
+    <class>demo.app.shared.authentication.PasswordAlgo</class>
+    <class>demo.app.shared.authentication.PasswordPolicy</class>
+    <class>demo.app.shared.authentication.Question</class>
+    <class>demo.app.shared.authentication.UserAccessLevel</class>
+    <class>demo.app.shared.authentication.UserAccessDomain</class>
+    <class>demo.app.shared.authentication.User</class>
+    <class>demo.app.shared.authentication.Login</class>
+    <class>demo.app.shared.authentication.LoginSession</class>
+    <class>demo.app.shared.authentication.PassRecovery</class>
+    <class>demo.app.shared.authentication.UserData</class>
+    <class>demo.app.shared.authentication.SessionData</class>
+    <class>demo.app.shared.authorization.Roles</class>
+    <class>demo.app.shared.authorization.AppMenus</class>
+    <class>demo.app.shared.authorization.RoleMenuBridge</class>
+    <class>demo.app.shared.authorization.UserRoleBridge</class>
+    <class>demo.app.shared.customers.AppCustomerType</class>
+    <class>demo.app.shared.customers.AppCustomerCategory</class>
+    <class>demo.app.shared.customers.AppCustomer</class>
+    <class>demo.app.shared.documentmanager.DocumentType</class>
+    <class>demo.app.shared.documentmanager.DocumentList</class>
+    <class>demo.app.shared.employee.IdProofInformation</class>
+    <class>demo.app.shared.employee.DepartmentType</class>
+    <class>demo.app.shared.employee.DesignationType</class>
+    <class>demo.app.shared.employee.JobType</class>
+    <class>demo.app.shared.employee.Visa</class>
+    <class>demo.app.shared.employee.EmpInformation</class>
+    <class>demo.app.shared.employee.EmpIdProof</class>
+    <class>demo.app.shared.attendance.LeaveAllocation</class>
+    <class>demo.app.shared.attendance.LeaveRequest</class>
+    <class>demo.app.shared.attendance.EmployeeLeaveSummary</class>
+    <class>demo.app.shared.attendance.AttendenceDetails</class>
+    <class>demo.app.shared.attendance.AttendenceSummary</class>
+    <class>demo.app.shared.backgroundcheck.DegreeType</class>
+    <class>demo.app.shared.backgroundcheck.UniversityType</class>
+    <class>demo.app.shared.backgroundcheck.CertificateType</class>
+    <class>demo.app.shared.backgroundcheck.GradeType</class>
+    <class>demo.app.shared.backgroundcheck.WorkExperience</class>
+    <class>demo.app.shared.backgroundcheck.CertificationDetails</class>
+    <class>demo.app.shared.backgroundcheck.EducationDetails</class>
+    <class>demo.app.shared.payroll.CostToCompany</class>
+    <class>demo.app.shared.payroll.SalaryStructureFinancialWise</class>
+    <class>demo.app.shared.payroll.EmployeeDeclartion</class>
+    <class>demo.app.shared.payroll.PaySlip</class>
+    </persistence-unit>
+
+</persistence>

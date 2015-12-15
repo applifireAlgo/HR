@@ -1,0 +1,35 @@
+Ext.define('Hrproject.hrproject.shared.demo.model.backgroundcheck.GradeTypeModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "grdCode",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "grdDesc",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "grdHelp",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "grdIcon",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});
